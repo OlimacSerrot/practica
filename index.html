@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--para justificar el contenido es con justify contend https://getbootstrap.com/docs/5.3/utilities/flex/-->
+    <!--las img se sacan de https://unsplash.com/es/fotos/7GeprSfVqLQ-->
+   <!--encabezao-->
+    <header>
+        <!--En el bg para cambiar un color se usa el de style como por ejemplo .bg-sena y en el nav class de bg_sena -->
+        <nav class="navbar navbar-expand-lg bg-sena">
+            <!--si quieres que el texto quede sentrado es solo container, el container fluid es para que el texto quede al 100%-->
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="img/yo.jpg" width="50px">logo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!--estructura de un menu siempre es (ul=lita desordenada, li=es un item, a=es un link o redireccionador)-->
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">                
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Nosotros">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Servicios">Servicios</a>
+                  </li>                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Contacto">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Desabilitado</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    <!--para que el carousel funcione solo se cooca data-bs-ride="carousel" en el primer div-->
+    <div id="carouselHeroCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+<!--para saber desde que img empieza es donde diga active en el carousel-item-->
+<!--slide significa texto alternitivo por si no sale algo-->
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="img/img1.jpg" class="d-block w-100" alt="slide 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/img2.jpg" class="d-block w-100" alt="slide 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/img3.jpg" class="d-block w-100" alt="slide 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/img4.jpg" class="d-block w-100" alt="slide 4">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeroCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>   
+          
+    </header>
+    <!--contenido principal-->
+    <!--el 100% de columnas para bootstrap es 12-->
+    <!--en html solo puede haber un h1-->
+    <!--el col-md-N hace que cuando a pag este pequeña no se sobremonten-->
+    <main>
+        <section id="Nosotros">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/texto/img5.jpg" alt="img5">
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Sobre Nosotros</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, dignissimos corporis sapiente libero nam eos a unde ea quibusdam. Corporis sit architecto sint nobis similique quod asperiores ipsa excepturi at laborum odit tempore ex vero nam commodi, quisquam vitae cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae possimus cum, ab placeat commodi quos optio quaerat! Reiciendis neque minima deleniti dignissimos placeat dolores libero molestiae ducimus eaque atque velit natus expedita laborum, laboriosam, sapiente vel alias voluptatum! Reiciendis et sapiente dignissimos adipisci sit a, tempora perferendis delectus repellendus voluptatibus magnam modi sed qui, atque nobis deserunt! Labore, ipsa.</p>
+
+                        <a href="">conocer +</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Servicios">
+            <div class="container text-center">
+            <h2>Nuestros <br> <span>Servicios</span></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img6.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 1</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img7.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 2</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img8.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 3</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img9.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 4</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img10.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 5</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-servicio">
+                        <img src="img/servicio/img11.jpg" class="w-100" alt="servicio 1 img 6">
+                        <a href="#"> imagen 6</a>
+
+                    </div>
+                </div>
+            </div>
+            </div>                
+        </section>
+        
+
+        <section id="Contacto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Contactenos</h2>
+                        <p>Escribenos tus dtos y cuentanos tu opinion</p>
+                        <form>
+                            <div class="mb-3">
+                              <label for="Nombre" class="form-label">Nombre</label>
+                              <input type="text" class="form-control" id="Nombre" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Email </label>
+                                <input type="Email" class="form-control" id="Email" aria-describedby="emailHelp">
+                              </div>
+                                <div class="mb-3">
+                                <label for="comentario" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="Comentario" rows="3"></textarea>
+                              </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15908.222336064848!2d-74.228565!3d4.5840443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f757a5b8009a1%3A0x13c15b9f63cf4e17!2sConjunto%20Residencial%20La%20Confianza%20II!5e0!3m2!1ses-419!2sco!4v1696611081389!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--pie de pagina-->
+    <footer>
+      <p> © 2023 - Camilo Torres Rincón - 2617500 </p>
+    </footer>
+
+    <!---el java script se pone antes de cerrarse el body-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
